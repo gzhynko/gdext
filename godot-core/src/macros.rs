@@ -623,7 +623,7 @@ macro_rules! gdext_get_arguments_info {
             [$(
                 {
                     i += 1;
-                    let prop = <$Signature as SignatureTuple>::property_info(i, stringify!($param)).property_sys();
+                    let prop = <$Signature as VarcallSignatureTuple>::property_info(i, stringify!($param)).property_sys();
                     prop
                 },
             )*]
